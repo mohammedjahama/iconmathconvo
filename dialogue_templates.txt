@@ -1,0 +1,133 @@
+# Arabic Math Dialogue Templates
+
+## Template Structure
+
+Each dialogue should follow this engagement pattern:
+1. Hook/Introduction - Capture student interest
+2. Exploration - Discover concepts through conversation
+3. Understanding - Build comprehension through examples
+4. Application - Connect to real life
+5. Confirmation - Verify understanding
+
+## Sample Template: Multiplication (الضرب)
+
+Teacher: اليوم سنتكتشف شيئاً مثيراً في الرياضيات! من منكم يحب الحلويات؟
+[Hook - Start with something students love]
+
+Student 1: أنا! أنا أحب الشوكولاتة!
+Student 2: وأنا أحب الحلوى!
+
+Teacher: ممتاز! تخيلوا أن لدينا 3 صناديق من الشوكولاتة، وفي كل صندوق 4 قطع.
+[Real-world context introduction]
+
+Student 1: كيف نعرف كم قطعة شوكولاتة لدينا بالمجموع؟
+
+Teacher: هذا سؤال رائع! يمكننا استخدام الضرب (multiplication) لمعرفة المجموع.
+[Introduce terminology naturally]
+
+Student 2: ما هو الضرب؟
+
+Teacher: الضرب هو طريقة سريعة لجمع مجموعات متساوية (equal groups).
+دعونا نعد معاً: 4 + 4 + 4 = 12
+[Connect to previous knowledge]
+
+Student 1: آه! فهمت! بدل أن نجمع 4 ثلاث مرات، نقول 3 × 4 = 12
+[Student discovery moment]
+
+## Template: Shapes (الأشكال)
+
+Teacher: من منكم يحب كرة القدم؟
+[Hook - Sports connection]
+
+Students: أنا! أنا!
+
+Teacher: رائع! هل تعلمون أن ملعب كرة القدم هو شكل مستطيل (rectangle)؟
+[Real-world geometry]
+
+Student 1: حقاً؟ ما هو المستطيل؟
+
+Teacher: دعونا نكتشف خصائص المستطيل (properties of rectangle) معاً.
+[Terminology introduction]
+
+## Key Elements in Each Dialogue:
+
+1. Student Engagement Markers:
+   - "رائع!"
+   - "هذا سؤال ممتاز"
+   - "دعونا نكتشف"
+   - "من منكم يحب...؟"
+
+2. Terminology Integration:
+   - Introduce Arabic term
+   - Follow with English in parentheses first time
+   - Use consistently afterward
+
+3. Discovery Moments:
+   - Student questions
+   - "آه! فهمت!"
+   - "الآن عرفت..."
+   - "يعني..."
+
+4. Real-World Connections:
+   - Food
+   - Sports
+   - Daily life
+   - Local culture
+
+5. Interactive Elements:
+   - Questions from teacher
+   - Student responses
+   - Group activities
+   - Visual descriptions
+
+## Prompt Structure for LLM:
+
+Generate a natural educational dialogue in Arabic about [TOPIC] that:
+1. Uses these curriculum terms: [LIST TERMS]
+2. Starts with an engaging hook about [REAL-WORLD CONNECTION]
+3. Includes student discovery moments
+4. Shows progressive understanding
+5. Connects to daily life
+6. Uses proper mathematical terminology
+7. Demonstrates student engagement
+
+The dialogue should feel like a real classroom conversation while naturally incorporating curriculum concepts and terminology.
+
+## Example Output Format:
+
+```json
+{
+    "topic_ar": "الضرب",
+    "dialogue_ar": {
+        "exchanges": [
+            {
+                "teacher": "اليوم سنتكتشف شيئاً مثيراً في الرياضيات! من منكم يحب الحلويات؟",
+                "context": "hook_introduction"
+            },
+            {
+                "student": "أنا! أنا أحب الشوكولاتة!",
+                "context": "student_engagement"
+            },
+            {
+                "teacher": "ممتاز! تخيلوا أن لدينا 3 صناديق من الشوكولاتة، وفي كل صندوق 4 قطع.",
+                "terminology": ["مجموعات متساوية"],
+                "context": "real_world_example"
+            }
+        ]
+    },
+    "key_terms_used": [
+        {
+            "arabic": "الضرب",
+            "english": "multiplication",
+            "context": "naturally_introduced"
+        }
+    ],
+    "learning_progression": [
+        "concept_introduction",
+        "visual_understanding",
+        "practical_application"
+    ]
+}
+```
+
+This structure ensures dialogues are both engaging and educationally effective, while maintaining curriculum alignment and proper terminology usage.

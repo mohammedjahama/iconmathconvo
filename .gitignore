@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+myenv/
+
+# Environment files
+.env
+.env.example
+CURSORAIKEY.txt
+**/CURSORAIKEY.txt
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary/backup files
+~$*
+*.bak
+*.swp
+*.swo
+
+# Generated content and output
+output/
+downloaded_pdfs/
+*.rtf
+*.webp
+
+# IDE
+.vscode/
+.idea/
+
+# Backup folders
+backupofimportssofar/
+untitled folder/
+
+# Generated CSV files that don't need version control
+outputquestionsg3*.csv
+Untitled*.csv
+generated*.csv
+
+# API Keys and Secrets
+*api_key*
+*apikey*
+*secret*
+*token*
+*credential*

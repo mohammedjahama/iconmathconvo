@@ -1,0 +1,29 @@
+Math Terminology Glossary (Grade 3 Division & Multiplication)
+
+1. Division Terms:
+- Dividend: The number being divided (e.g., in 56 ÷ 8 = 7, 56 is the dividend)
+- Divisor: The number we divide by (e.g., in 56 ÷ 8 = 7, 8 is the divisor)
+- Unknown Factor: The missing number in a division equation (e.g., in 72 ÷ ? = 9, 8 is the unknown factor)
+
+2. Array Terms:
+- Array: An arrangement of objects in rows and columns
+- Row: A horizontal line of objects in an array
+- Column: A vertical line of objects in an array
+- Equal Groups: Groups that have the same number of objects
+
+3. Problem-Solving Contexts:
+- Equal Sharing: Dividing objects equally among a number of groups or people
+- Equal Grouping: Making groups with the same number of objects
+- Arrays in Division: Using rows and columns to organize and divide objects
+
+4. Visual Models:
+- Rectangular Arrays: Objects arranged in rows and columns forming a rectangle
+- Equal Groups Model: Objects separated into groups with the same amount in each
+
+5. Common Problem Types:
+- Sharing Problems: Dividing a total amount equally among a number of groups
+- Grouping Problems: Finding how many groups can be made with a given amount
+- Array Problems: Using rows and columns to solve division problems
+- Missing Factor Problems: Finding an unknown number in a division equation
+
+Note: This terminology is used consistently in word problems and mathematical expressions to help students understand division concepts through real-world situations and visual models.

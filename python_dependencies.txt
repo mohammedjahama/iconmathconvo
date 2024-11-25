@@ -1,0 +1,25 @@
+# Core dependencies
+openai>=0.27.0
+python-dotenv>=0.19.0
+anthropic>=0.3.0  # Optional - for Claude API
+
+# Data handling
+json5>=0.9.6
+pydantic>=1.8.2
+
+# Async support
+aiohttp>=3.8.1
+asyncio>=3.4.3
+
+# Validation
+regex>=2021.8.3
+python-dateutil>=2.8.2
+
+# Testing
+pytest>=6.2.5
+pytest-asyncio>=0.15.1
+
+# Development tools
+black>=21.7b0  # Code formatting
+isort>=5.9.3   # Import sorting
+flake8>=3.9.2  # Code linting

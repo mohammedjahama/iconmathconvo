@@ -1,0 +1,242 @@
+# Arabic Math Education System Requirements
+
+## System Overview
+A comprehensive system for generating and managing Arabic mathematics education content for Jordan's curriculum, using LLMs for content generation while maintaining strict terminology consistency and educational standards.
+
+## Core Components & Workflow
+
+1. DIALOGUE GENERATION
+   - Input: Math curriculum topics and standardized terminology
+   - Process: LLM generates natural teacher-student dialogues
+   - Output: Structured dialogue in Arabic following curriculum terminology
+   - Validation: Terminology checker ensures consistency with curriculum standards
+
+2. SKILL EXTRACTION
+   - Input: Generated lesson dialogue
+   - Process: LLM analyzes dialogue to identify core skills
+   - Output: List of specific skills taught in the lesson
+   - Validation: Skills mapped to curriculum objectives
+
+3. QUESTION GENERATION
+   - Input: Extracted skills and lesson content
+   - Process: LLM generates multiple variations of questions per skill
+   - Requirements:
+     * Auto-gradeable formats (Multiple Choice, True/False)
+     * Consistent difficulty levels per skill
+     * Arabic language
+     * Shape integration where needed
+     * Proper distractors
+     * Skill-specific feedback
+
+4. SHAPE HANDLING
+   - Standardized meta tags for shapes:
+     ```
+     <shape type="square" width="5cm"/>
+     <shape type="rectangle" width="6cm" height="4cm"/>
+     <shape type="triangle" base="4cm" height="3cm"/>
+     <shape type="circle" radius="3cm"/>
+     ```
+   - Clear specifications for manual drawing team
+   - Integration with questions and dialogues
+
+5. EXAM GENERATION
+   - Input: Question bank grouped by skills
+   - Process: 
+     * Select questions covering all lesson skills
+     * Balance difficulty levels
+     * Ensure comprehensive skill coverage
+   - Output: 
+     * Structured exam in Arabic
+     * Answer key
+     * Skill mapping for feedback
+
+6. GRADING & FEEDBACK
+   - Per-question feedback
+   - Skill-level assessment
+   - Overall exam performance
+   - Remedial lesson recommendations based on skill performance
+
+## Implementation Strategy
+
+1. DIALOGUE GENERATION SYSTEM
+   ```python
+   class DialogueGenerator:
+       def __init__(self, terminology_validator, curriculum_guide):
+           self.validator = terminology_validator
+           self.curriculum = curriculum_guide
+       
+       def generate_dialogue(self, topic, grade, unit):
+           # Generate initial dialogue using LLM
+           # Validate terminology
+           # Ensure curriculum alignment
+           # Return structured dialogue
+   ```
+
+2. SKILL EXTRACTION SYSTEM
+   ```python
+   class SkillExtractor:
+       def extract_skills(self, dialogue):
+           # Analyze dialogue content
+           # Identify key skills
+           # Map to curriculum objectives
+           # Generate skill descriptions
+   ```
+
+3. QUESTION GENERATION SYSTEM
+   ```python
+   class QuestionGenerator:
+       def generate_questions(self, skill, difficulty_level):
+           # Generate multiple question variations
+           # Include shape meta tags where needed
+           # Create answer choices
+           # Generate feedback
+           # Validate terminology
+   ```
+
+4. EXAM SYSTEM
+   ```python
+   class ExamGenerator:
+       def create_exam(self, lesson_skills, question_bank):
+           # Select questions covering all skills
+           # Balance difficulty
+           # Generate exam structure
+           # Create answer key
+           # Map questions to skills
+   
+   class ExamGrader:
+       def grade_exam(self, student_answers, exam):
+           # Grade individual questions
+           # Calculate skill-level performance
+           # Generate detailed feedback
+           # Recommend remedial content
+   ```
+
+## Data Structures
+
+1. LESSON CONTENT
+   ```json
+   {
+       "title_ar": "عنوان الدرس",
+       "grade": 3,
+       "unit": 1,
+       "dialogue_ar": {
+           "exchanges": [
+               {"teacher": "...", "student": "..."}
+           ]
+       },
+       "skills": [
+           {
+               "name_ar": "اسم المهارة",
+               "description_ar": "وصف المهارة",
+               "questions": [
+                   {
+                       "text_ar": "نص السؤال",
+                       "type": "multiple_choice",
+                       "choices": ["..."],
+                       "correct_answer": "...",
+                       "difficulty": 1,
+                       "feedback_ar": "...",
+                       "shape_meta": "<shape.../>",
+                       "skill_feedback_ar": "..."
+                   }
+               ]
+           }
+       ]
+   }
+   ```
+
+2. EXAM STRUCTURE
+   ```json
+   {
+       "title_ar": "عنوان الاختبار",
+       "lesson_id": "...",
+       "questions": [
+           {
+               "question_id": "...",
+               "skill_id": "...",
+               "text_ar": "...",
+               "choices": ["..."],
+               "correct_answer": "...",
+               "skill_feedback_ar": "..."
+           }
+       ],
+       "skill_coverage": {
+           "skill_id": "question_count"
+       }
+   }
+   ```
+
+3. STUDENT RESULTS
+   ```json
+   {
+       "student_id": "...",
+       "exam_id": "...",
+       "answers": {
+           "question_id": "student_answer"
+       },
+       "skill_performance": {
+           "skill_id": {
+               "correct": 0,
+               "total": 0,
+               "feedback_ar": "...",
+               "recommended_lessons": ["..."]
+           }
+       },
+       "total_score": 0
+   }
+   ```
+
+## Validation Requirements
+
+1. TERMINOLOGY
+   - Strict adherence to curriculum terminology
+   - Consistency across all content
+   - Grade-appropriate language
+   - Mathematical accuracy
+
+2. CONTENT
+   - Dialogue natural flow
+   - Skill coverage completeness
+   - Question quality and clarity
+   - Shape description accuracy
+
+3. TECHNICAL
+   - JSON structure validity
+   - Arabic text encoding
+   - Meta tag formatting
+   - Grading accuracy
+
+## Output Requirements
+
+1. All content must be in Arabic
+2. Questions must be auto-gradeable
+3. Shape descriptions must be clear for manual creation
+4. Feedback must be skill-focused
+5. Content must follow curriculum standards
+
+## Development Phases
+
+1. PHASE 1: Core Generation
+   - Implement dialogue generation
+   - Develop terminology validation
+   - Create basic content structure
+
+2. PHASE 2: Question System
+   - Implement skill extraction
+   - Develop question generation
+   - Create shape meta system
+
+3. PHASE 3: Exam System
+   - Implement exam generation
+   - Develop grading system
+   - Create feedback mechanism
+
+4. PHASE 4: Integration
+   - Connect all components
+   - Implement data persistence
+   - Create API interfaces
+
+5. PHASE 5: Testing & Refinement
+   - Validate with curriculum experts
+   - Test with real students
+   - Refine based on feedback
